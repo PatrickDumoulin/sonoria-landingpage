@@ -3,7 +3,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import logoDeepsight from "@/assets/logo-deepsight.png";
 import logoBrb from "@/assets/logo-brb.png";
 import logoGemini from "@/assets/logo-gemini.png";
-import logoFermeOlofee from "@/assets/logo-ferme-olofee.png";
 
 export const SonoriaTrust = () => {
   const { t } = useLanguage();
@@ -11,8 +10,7 @@ export const SonoriaTrust = () => {
   const logos = [
     { src: logoDeepsight, alt: "DeepSight" },
     { src: logoBrb, alt: "BRB" },
-    { src: logoGemini, alt: "Sonoria" },
-    { src: logoFermeOlofee, alt: "Ferme Olofée" },
+    { src: logoGemini, alt: "Gemini" },
   ];
 
   return (
@@ -47,7 +45,7 @@ export const SonoriaTrust = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="max-h-10 md:max-h-12 w-auto object-contain opacity-100"
+                  className="max-h-10 md:max-h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}

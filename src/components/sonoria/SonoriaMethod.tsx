@@ -82,7 +82,7 @@ export const SonoriaMethod = () => {
           {t("100% clé en main. Zéro effort de votre côté.", "100% done for you. Zero effort on your side.")}
         </motion.p>
 
-        <div className="flex flex-col gap-6 max-w-3xl mx-auto mb-12">
+        <div className="flex flex-col gap-6 max-w-3xl mx-auto mb-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -107,6 +107,46 @@ export const SonoriaMethod = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-6xl mx-auto"
+        >
+          <p className="text-center text-sm font-semibold text-primary uppercase tracking-wider mb-8">
+            {t("À quoi ça ressemble", "What it looks like")}
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="rounded-2xl overflow-hidden border border-border shadow-lg"
+            >
+              <img
+                src="/screenshot-procedure.png"
+                alt={t("Vue d'une procédure avec étapes et contenu détaillé", "Procedure view with steps and detailed content")}
+                className="w-full h-auto block"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="rounded-2xl overflow-hidden border border-border shadow-lg"
+            >
+              <img
+                src="/screenshot-assistant.png"
+                alt={t("Assistant IA répondant à une question sur une procédure", "AI assistant answering a question about a procedure")}
+                className="w-full h-auto block"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

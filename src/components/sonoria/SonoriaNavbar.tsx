@@ -55,8 +55,12 @@ export const SonoriaNavbar = () => {
                 {item.name}
               </a>
             ))}
-            <button onClick={toggleLanguage} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 border border-primary/30 hover:bg-primary/20 transition-colors text-sm font-medium text-primary">
-              <Globe className="w-4 h-4" />
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 border border-primary/30 hover:bg-primary/20 transition-colors text-sm font-medium text-primary"
+              aria-label={isFrench ? "Switch to English" : "Passer en français"}
+            >
+              <Globe className="w-4 h-4" aria-hidden="true" />
               {isFrench ? "EN" : "FR"}
             </button>
             <a href={calendlyUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg gradient-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity">
@@ -64,21 +68,31 @@ export const SonoriaNavbar = () => {
             </a>
           </nav>
 
-          <button className="md:hidden p-2 text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button
+            className="md:hidden p-2 text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? t("Fermer le menu", "Close menu") : t("Ouvrir le menu", "Open menu")}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-nav"
+          >
+            {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
 
         {isMobileMenuOpen && (
-          <motion.nav initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-border shadow-lg z-50">
+          <motion.nav id="mobile-nav" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} aria-label={t("Navigation mobile", "Mobile navigation")} className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-border shadow-lg z-50">
             <div className="flex flex-col gap-4 px-6 py-6">
               {navItems.map((item) => (
                 <a key={item.name} href={item.href} className="text-foreground hover:text-primary transition-colors text-base font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>
                   {item.name}
                 </a>
               ))}
-              <button onClick={toggleLanguage} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 border border-primary/30 text-sm font-medium text-primary w-fit">
-                <Globe className="w-4 h-4" />
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 border border-primary/30 text-sm font-medium text-primary w-fit"
+                aria-label={isFrench ? "Switch to English" : "Passer en français"}
+              >
+                <Globe className="w-4 h-4" aria-hidden="true" />
                 {isFrench ? "EN" : "FR"}
               </button>
               <a href={calendlyUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg gradient-primary text-primary-foreground font-medium text-sm text-center" onClick={() => setIsMobileMenuOpen(false)}>

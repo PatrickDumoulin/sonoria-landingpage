@@ -2,7 +2,6 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { SonoriaNavbar } from "@/components/sonoria/SonoriaNavbar";
 import { SonoriaHero } from "@/components/sonoria/SonoriaHero";
 import { SonoriaTrust } from "@/components/sonoria/SonoriaTrust";
-import { SonoriaLoom } from "@/components/sonoria/SonoriaLoom";
 import { SonoriaProblem } from "@/components/sonoria/SonoriaProblem";
 import { SonoriaResults } from "@/components/sonoria/SonoriaResults";
 import { SonoriaShift } from "@/components/sonoria/SonoriaShift";
@@ -20,7 +19,6 @@ const Index = () => {
         <main>
           <SonoriaHero />
           <SonoriaTrust />
-          <SonoriaLoom />
           <SonoriaProblem />
           <SonoriaResults />
           <SonoriaShift />

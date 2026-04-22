@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
+
   <!-- Homepage -->
   <url>
     <loc>https://sonoria.ca/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://sonoria.ca/" />
@@ -14,49 +14,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sonoria.ca/" />
     <image:image>
       <image:loc>https://sonoria.ca/og-image.png</image:loc>
-      <image:title>Sonoria - Récupérez votre capacité de production perdue en 21 jours</image:title>
-      <image:caption>Élimination des arrêts machine cachés pour fabricants d'équipements industriels</image:caption>
+      <image:title>Sonoria - Transformez le savoir-faire de vos équipes en instructions claires en 14 jours</image:title>
+      <image:caption>Service clé en main de documentation du savoir-faire pour entreprises manufacturières et de construction</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sonoria.ca/logo.png</image:loc>
+      <image:title>Sonoria - Logo</image:title>
     </image:image>
   </url>
-  
+
   <!-- Questionnaire page -->
   <url>
     <loc>https://sonoria.ca/questionnaire</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://sonoria.ca/questionnaire" />
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://sonoria.ca/questionnaire" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sonoria.ca/questionnaire" />
   </url>
-  
-  <!-- Section anchors -->
-  <url>
-    <loc>https://sonoria.ca/#probleme</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://sonoria.ca/#impact</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
-  <url>
-    <loc>https://sonoria.ca/#solution</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://sonoria.ca/#resultats</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
 </urlset>
