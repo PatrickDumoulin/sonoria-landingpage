@@ -1,9 +1,11 @@
-import { motion } from "framer-motion";
-import { Upload, Layers, MessageSquareText, Rocket } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Upload, Layers, MessageSquareText, Rocket, X, ZoomIn } from "lucide-react";
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaMethod = () => {
   const { t } = useLanguage();
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   const steps = [
     {
@@ -119,35 +121,70 @@ export const SonoriaMethod = () => {
             {t("À quoi ça ressemble", "What it looks like")}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="rounded-2xl overflow-hidden border border-border shadow-lg"
-            >
-              <img
-                src="/screenshot-procedure.png"
-                alt={t("Vue d'une procédure avec étapes et contenu détaillé", "Procedure view with steps and detailed content")}
-                className="w-full h-auto block"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="rounded-2xl overflow-hidden border border-border shadow-lg"
-            >
-              <img
-                src="/screenshot-assistant.png"
-                alt={t("Assistant IA répondant à une question sur une procédure", "AI assistant answering a question about a procedure")}
-                className="w-full h-auto block"
-              />
-            </motion.div>
+            {[
+              {
+                src: "/screenshot-procedure.png",
+                alt: t("Vue d'une procédure avec étapes et contenu détaillé", "Procedure view with steps and detailed content"),
+                delay: 0.1,
+                x: -20,
+              },
+              {
+                src: "/screenshot-assistant.png",
+                alt: t("Assistant IA répondant à une question sur une procédure", "AI assistant answering a question about a procedure"),
+                delay: 0.2,
+                x: 20,
+              },
+            ].map((img) => (
+              <motion.button
+                key={img.src}
+                initial={{ opacity: 0, x: img.x }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: img.delay }}
+                onClick={() => setLightboxSrc(img.src)}
+                className="rounded-2xl overflow-hidden border border-border shadow-lg relative group cursor-zoom-in text-left w-full"
+                aria-label={t("Agrandir l'image", "Enlarge image")}
+              >
+                <img src={img.src} alt={img.alt} className="w-full h-auto block" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200 flex items-center justify-center">
+                  <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 drop-shadow-lg" />
+                </div>
+              </motion.button>
+            ))}
           </div>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {lightboxSrc && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+            onClick={() => setLightboxSrc(null)}
+          >
+            <button
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              onClick={() => setLightboxSrc(null)}
+              aria-label={t("Fermer", "Close")}
+            >
+              <X className="w-5 h-5 text-white" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              src={lightboxSrc}
+              alt=""
+              className="max-w-full max-h-[90vh] rounded-2xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
