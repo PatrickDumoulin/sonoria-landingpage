@@ -71,7 +71,7 @@ export const SonoriaProblem = () => {
           </span>
           <h2 id="problem-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             {t("Votre équipe passe des semaines à faire quelque chose ", "Your team spends weeks doing something ")}
-            <span className="text-gradient">{t("qu'une machine peut faire en minutes.", "a machine can do in minutes.")}</span>
+            <span className="text-gradient">{t("qu'un système peut faire en minutes.", "a system can do in minutes.")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t(
