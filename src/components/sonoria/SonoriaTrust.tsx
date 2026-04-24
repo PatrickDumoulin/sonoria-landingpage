@@ -3,6 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import logoDeepsight from "@/assets/logo-deepsight.png";
 import logoBrb from "@/assets/logo-brb.png";
 import logoGemini from "@/assets/logo-gemini.png";
+import logoFermeOlofee from "@/assets/logo-ferme-olofee.png";
 
 export const SonoriaTrust = () => {
   const { t } = useLanguage();
@@ -10,7 +11,8 @@ export const SonoriaTrust = () => {
   const logos = [
     { src: logoDeepsight, alt: "DeepSight" },
     { src: logoBrb, alt: "BRB" },
-    { src: logoGemini, alt: "Gemini" },
+    { src: logoGemini, alt: "Sonoria" },
+    { src: logoFermeOlofee, alt: "Ferme Olofée" },
   ];
 
   return (
@@ -24,8 +26,8 @@ export const SonoriaTrust = () => {
           className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto"
         >
           {t(
-            "On a automatisé la détection des non-conformités pour des entreprises certifiées au Québec. Ce qui prenait des semaines de vérification manuelle se règle maintenant en quelques heures.",
-            "We've automated compliance gap detection for certified companies in Quebec. What used to take weeks of manual review now takes a few hours."
+            "Je conçois des systèmes qui ont généré plus de 700 000 $ en valeur opérationnelle et automatisent des processus critiques. Soutenu par une équipe avec plus de 10 ans d'expérience à livrer des systèmes logiciels concrets.",
+            "I design systems that have generated over $700,000 in operational value and automate critical processes. Backed by a team with 10+ years of experience delivering real-world software systems."
           )}
         </motion.p>
 
@@ -45,7 +47,7 @@ export const SonoriaTrust = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="max-h-10 md:max-h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  className="max-h-10 md:max-h-12 w-auto object-contain opacity-100"
                 />
               </div>
             ))}
