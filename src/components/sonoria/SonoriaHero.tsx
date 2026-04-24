@@ -52,7 +52,7 @@ export const SonoriaHero = () => {
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6"
           >
             {t(
-              "Votre prochaine révision de conformité. En quelques heures, pas en semaines.",
+              "Votre prochaine révision de conformité, en quelques heures seulement.",
               "Your next compliance review. Done in hours, not weeks."
             )}
           </motion.h1>

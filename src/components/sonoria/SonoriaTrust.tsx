@@ -26,7 +26,7 @@ export const SonoriaTrust = () => {
           className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto"
         >
           {t(
-            "Je conçois des systèmes qui ont généré plus de 700 000 $ en valeur opérationnelle et automatisent des processus critiques. Soutenu par une équipe avec plus de 10 ans d'expérience à livrer des systèmes logiciels concrets.",
+            "Nous concevons des systèmes qui ont généré plus de 700 000 $ en valeur opérationnelle et automatisent des processus critiques. Soutenus par une équipe avec plus de 10 ans d'expérience à livrer des systèmes logiciels concrets.",
             "I design systems that have generated over $700,000 in operational value and automate critical processes. Backed by a team with 10+ years of experience delivering real-world software systems."
           )}
         </motion.p>
