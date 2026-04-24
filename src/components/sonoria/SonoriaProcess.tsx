@@ -8,7 +8,7 @@ export const SonoriaProcess = () => {
   const phases = [
     {
       icon: Database,
-      days: t("Jour 1–2", "Day 1–2"),
+      days: t("Jour 1–3", "Day 1–3"),
       title: t("On se connecte à vos documents et on configure la norme", "We connect to your documents and configure the standard"),
       description: t(
         "On accède à votre SharePoint ou OneDrive et on importe les exigences de votre certification. Aucune perturbation de vos opérations.",
@@ -17,7 +17,7 @@ export const SonoriaProcess = () => {
     },
     {
       icon: Search,
-      days: t("Jour 3–4", "Day 3–4"),
+      days: t("Jour 4–10", "Day 4–10"),
       title: t("On lance l'analyse automatique", "We run the automatic analysis"),
       description: t(
         "Notre système compare chaque procédure avec chaque clause de votre norme. On identifie les écarts, les omissions et les contradictions.",
@@ -26,7 +26,7 @@ export const SonoriaProcess = () => {
     },
     {
       icon: FileCheck,
-      days: t("Jour 5", "Day 5"),
+      days: t("Jour 11–14", "Day 11–14"),
       title: t("On vous livre le rapport complet", "We deliver the complete report"),
       description: t(
         "Liste précise des non-conformités avec le document concerné, la clause applicable et le niveau de priorité. Votre équipe peut commencer à corriger immédiatement.",
@@ -61,8 +61,8 @@ export const SonoriaProcess = () => {
             {t("Comment ça marche", "How it works")}
           </span>
           <h2 id="process-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Premier rapport d'écarts en ", "First gap report in ")}
-            <span className="text-gradient">{t("5 jours ouvrables.", "5 business days.")}</span>
+            {t("Rapport d'écarts en ", "Gap report in ")}
+            <span className="text-gradient">{t("14 jours ouvrables.", "14 business days.")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t(

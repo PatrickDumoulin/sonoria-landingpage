@@ -1,11 +1,9 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { Database, Search, FileText, Eye, X, ZoomIn } from "lucide-react";
-import { useState } from "react";
+import { motion } from "framer-motion";
+import { Database, Search, FileText, Eye } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaMethod = () => {
   const { t } = useLanguage();
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   const steps = [
     {
@@ -43,13 +41,13 @@ export const SonoriaMethod = () => {
   ];
 
   return (
-    <section 
-      id="solution" 
+    <section
+      id="solution"
       aria-labelledby="solution-heading"
       className="py-24 bg-background relative overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" aria-hidden="true" />
-      
+
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -84,7 +82,7 @@ export const SonoriaMethod = () => {
           {t("100% clé en main. Zéro perturbation de vos opérations.", "100% done for you. Zero disruption to your operations.")}
         </motion.p>
 
-        <div className="flex flex-col gap-6 max-w-3xl mx-auto mb-16">
+        <div className="flex flex-col gap-6 max-w-3xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -109,82 +107,7 @@ export const SonoriaMethod = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto"
-        >
-          <p className="text-center text-sm font-semibold text-primary uppercase tracking-wider mb-8">
-            {t("À quoi ça ressemble", "What it looks like")}
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                src: "/screenshot-procedure.png",
-                alt: t("Vue d'une procédure avec étapes et contenu détaillé", "Procedure view with steps and detailed content"),
-                delay: 0.1,
-                x: -20,
-              },
-              {
-                src: "/screenshot-assistant.png",
-                alt: t("Vue de l'assistant répondant à une question sur une procédure de conformité", "Assistant answering a question about a compliance procedure"),
-                delay: 0.2,
-                x: 20,
-              },
-            ].map((img) => (
-              <motion.button
-                key={img.src}
-                initial={{ opacity: 0, x: img.x }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: img.delay }}
-                onClick={() => setLightboxSrc(img.src)}
-                className="rounded-2xl overflow-hidden border border-border shadow-lg relative group cursor-zoom-in text-left w-full"
-                aria-label={t("Agrandir l'image", "Enlarge image")}
-              >
-                <img src={img.src} alt={img.alt} className="w-full h-auto block" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200 flex items-center justify-center">
-                  <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 drop-shadow-lg" />
-                </div>
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
       </div>
-
-      <AnimatePresence>
-        {lightboxSrc && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-            onClick={() => setLightboxSrc(null)}
-          >
-            <button
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-              onClick={() => setLightboxSrc(null)}
-              aria-label={t("Fermer", "Close")}
-            >
-              <X className="w-5 h-5 text-white" />
-            </button>
-            <motion.img
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              src={lightboxSrc}
-              alt=""
-              className="max-w-full max-h-[90vh] rounded-2xl shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };
