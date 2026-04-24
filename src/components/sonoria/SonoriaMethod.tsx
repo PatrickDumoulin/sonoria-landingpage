@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Upload, Layers, MessageSquareText, Rocket, X, ZoomIn } from "lucide-react";
+import { Database, Search, FileText, Eye, X, ZoomIn } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -9,35 +9,35 @@ export const SonoriaMethod = () => {
 
   const steps = [
     {
-      icon: Upload,
-      title: t("Envoyez-nous tout ce que vous avez", "Send us everything you've got"),
+      icon: Database,
+      title: t("On se connecte à vos documents existants", "We connect to your existing documents"),
       description: t(
-        "PDFs, vidéos de formation, photos, notes manuscrites — même le désordre. On s'occupe du tri.",
-        "PDFs, training videos, photos, handwritten notes — even the mess. We handle the sorting."
+        "SharePoint, OneDrive, Google Drive. On accède à vos procédures internes sans déplacer quoi que ce soit.",
+        "SharePoint, OneDrive, Google Drive. We access your internal procedures without moving anything."
       ),
     },
     {
-      icon: Layers,
-      title: t("On crée vos procédures pour vous", "We create your procedures for you"),
+      icon: Search,
+      title: t("On compare vos documents avec votre norme", "We compare your documents against your standard"),
       description: t(
-        "On transforme votre matériel brut en instructions claires, étape par étape, avec images et vidéos intégrées. Vous ne rédigez rien.",
-        "We turn your raw material into clear step-by-step instructions with embedded images and videos. You write nothing."
+        "Notre système analyse automatiquement chaque procédure par rapport aux exigences de votre certification. Clause par clause.",
+        "Our system automatically analyzes each procedure against your certification requirements. Clause by clause."
       ),
     },
     {
-      icon: MessageSquareText,
-      title: t("Vos employés posent des questions, le système répond", "Your employees ask questions, the system answers"),
+      icon: FileText,
+      title: t("Vous recevez le rapport d'écarts complet", "You receive the complete gap report"),
       description: t(
-        "Un employé tape sa question en langage normal. Le système répond avec la procédure exacte, la bonne étape, le bon visuel.",
-        "An employee types their question in plain language. The system responds with the exact procedure, the right step, the right visual."
+        "La liste précise de ce qui est non-conforme, avec le document concerné et la clause qui pose problème. Votre équipe valide et corrige.",
+        "The exact list of what is non-compliant, with the relevant document and the clause at issue. Your team validates and corrects."
       ),
     },
     {
-      icon: Rocket,
-      title: t("Le système s'améliore tout seul", "The system improves on its own"),
+      icon: Eye,
+      title: t("Le système surveille en continu", "The system monitors continuously"),
       description: t(
-        "Chaque question sans réponse est signalée. Vos experts comblent les trous, et le système devient plus complet avec le temps.",
-        "Every unanswered question gets flagged. Your experts fill the gaps, and the system becomes more complete over time."
+        "Quand vos procédures changent, le système revérifie automatiquement. Vous êtes alerté avant que l'auditeur ne trouve quoi que ce soit.",
+        "When your procedures change, the system re-checks automatically. You're alerted before the auditor finds anything."
       ),
     },
   ];
@@ -62,14 +62,14 @@ export const SonoriaMethod = () => {
             {t("Notre approche", "Our approach")}
           </span>
           <h2 id="solution-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Vous ne créez pas de procédures.", "You don't create procedures.")}
+            {t("Vous ne faites pas la révision manuellement.", "You don't do the review manually.")}
             <br />
-            <span className="text-gradient">{t("On fait tout pour vous.", "We do everything for you.")}</span>
+            <span className="text-gradient">{t("On détecte tout pour vous.", "We detect everything for you.")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t(
-              "Pas de rédaction. Pas de logiciel à apprendre. Pas de projet IT. Vous nous envoyez votre matériel, on vous livre un système fonctionnel.",
-              "No writing. No software to learn. No IT project. You send us your material, we deliver a working system."
+              "Pas de configuration. Pas de formation. Pas de projet IT. On se connecte à vos documents existants et on vous livre un rapport d'écarts complet.",
+              "No configuration. No training. No IT project. We connect to your existing documents and deliver a complete gap report."
             )}
           </p>
         </motion.div>
@@ -81,7 +81,7 @@ export const SonoriaMethod = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center text-primary font-display font-bold text-lg mb-12"
         >
-          {t("100% clé en main. Zéro effort de votre côté.", "100% done for you. Zero effort on your side.")}
+          {t("100% clé en main. Zéro perturbation de vos opérations.", "100% done for you. Zero disruption to your operations.")}
         </motion.p>
 
         <div className="flex flex-col gap-6 max-w-3xl mx-auto mb-16">
@@ -130,7 +130,7 @@ export const SonoriaMethod = () => {
               },
               {
                 src: "/screenshot-assistant.png",
-                alt: t("Assistant IA répondant à une question sur une procédure", "AI assistant answering a question about a procedure"),
+                alt: t("Vue de l'assistant répondant à une question sur une procédure de conformité", "Assistant answering a question about a compliance procedure"),
                 delay: 0.2,
                 x: 20,
               },

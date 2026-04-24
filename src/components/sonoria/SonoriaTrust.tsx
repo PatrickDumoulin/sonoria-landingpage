@@ -24,8 +24,8 @@ export const SonoriaTrust = () => {
           className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto"
         >
           {t(
-            "Je conçois des systèmes qui ont généré plus de 700 000 $ en valeur opérationnelle et automatisent des processus critiques. Soutenu par une équipe avec plus de 10 ans d'expérience à livrer des systèmes logiciels concrets.",
-            "I design systems that have generated over $700,000 in operational value and automate critical processes. Backed by a team with 10+ years of experience delivering real-world software systems."
+            "On a automatisé la détection des non-conformités pour des entreprises certifiées au Québec. Ce qui prenait des semaines de vérification manuelle se règle maintenant en quelques heures.",
+            "We've automated compliance gap detection for certified companies in Quebec. What used to take weeks of manual review now takes a few hours."
           )}
         </motion.p>
 

@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, ShieldAlert, UserCheck } from "lucide-react";
+import { ArrowRight, Clock, ShieldAlert, FileText } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaHero = () => {
   const { t, language } = useLanguage();
 
   const badges = [
-    { icon: Clock, text: t("Moins d'interruptions sur le plancher", "Fewer interruptions on the floor") },
-    { icon: ShieldAlert, text: t("Moins d'erreurs de production", "Fewer production errors") },
-    { icon: UserCheck, text: t("Employés autonomes dès la première semaine", "Employees independent within the first week") },
+    { icon: ShieldAlert, text: t("Zéro surprise à l'audit", "Zero surprises at your audit") },
+    { icon: Clock, text: t("40 heures par mois réduites à quelques heures", "40 hours per month reduced to a few") },
+    { icon: FileText, text: t("Rapport d'écarts prêt en quelques minutes", "Gap report ready in minutes") },
   ];
 
   return (
@@ -40,7 +40,7 @@ export const SonoriaHero = () => {
             className="mb-6"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
-              {t("Manufacturier & Construction", "Manufacturing & Construction")}
+              {t("Pour les entreprises certifiées ISO, SQF, CNESST", "For ISO, SQF, CNESST certified companies")}
             </span>
           </motion.div>
 
@@ -52,8 +52,8 @@ export const SonoriaHero = () => {
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6"
           >
             {t(
-              "Vos procédures existent. Personne ne les utilise.",
-              "Your procedures exist. Nobody uses them."
+              "Votre prochaine révision de conformité. En quelques heures, pas en semaines.",
+              "Your next compliance review. Done in hours, not weeks."
             )}
           </motion.h1>
 
@@ -64,8 +64,8 @@ export const SonoriaHero = () => {
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed"
           >
             {t(
-              "Pendant ce temps, vos employés s'interrompent les uns les autres, font des erreurs évitables, et vos nouveaux prennent des semaines à devenir autonomes.",
-              "Meanwhile, your employees interrupt each other, make avoidable mistakes, and new hires take weeks to get up to speed."
+              "En ce moment, votre équipe passe des dizaines d'heures chaque année à comparer manuellement vos procédures avec les exigences de votre norme. On automatise ça.",
+              "Right now, your team spends dozens of hours every year manually comparing your procedures against your certification requirements. We automate that."
             )}
           </motion.p>
 
@@ -76,8 +76,8 @@ export const SonoriaHero = () => {
             className="text-base text-foreground/80 max-w-3xl mx-auto mb-10 font-display font-semibold"
           >
             {t(
-              "On prend vos documents, vidéos et savoir-faire — et on en fait un système que vos employés utilisent vraiment. En 14 jours. Sans effort de votre part.",
-              "We take your documents, videos, and know-how — and turn them into a system your employees actually use. In 14 days. Zero effort on your end."
+              "On connecte vos documents existants à votre norme de certification. On détecte les écarts automatiquement. Votre équipe valide et corrige, elle ne cherche plus.",
+              "We connect your existing documents to your certification standard. We detect gaps automatically. Your team validates and corrects, no more searching."
             )}
           </motion.p>
 
@@ -106,13 +106,13 @@ export const SonoriaHero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl gradient-primary text-primary-foreground font-display font-semibold hover:opacity-90 transition-opacity text-lg"
-              aria-label={t("Réserver un appel de 10 minutes", "Book a 10-minute call")}
+              aria-label={t("Réserver un diagnostic de conformité gratuit", "Book a free compliance diagnostic")}
             >
-              {t("Réserver un appel de 10 min — c'est gratuit", "Book a free 10-min call")}
+              {t("Réserver un diagnostic de conformité gratuit", "Book a free compliance diagnostic")}
               <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </a>
             <p className="text-sm text-muted-foreground mt-3">
-              {t("Pas de vente. On regarde ensemble où vous perdez du temps.", "No sales pitch. We look together at where you're losing time.")}
+              {t("Pas de vente. On regarde ensemble où vous êtes exposés.", "No sales pitch. We look together at where you're exposed.")}
             </p>
           </motion.div>
         </div>

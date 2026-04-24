@@ -6,19 +6,19 @@ export const SonoriaShift = () => {
   const { t } = useLanguage();
 
   const oldWays = [
-    t("Les réponses sont dans la tête de 2 ou 3 personnes", "Answers live in 2 or 3 people's heads"),
-    t("On interrompt quelqu'un chaque fois qu'on a une question", "Someone gets interrupted every time there's a question"),
-    t("Les procédures sont dans des cartables que personne n'ouvre", "Procedures are in binders nobody opens"),
-    t("Former un nouveau prend des semaines et mobilise un senior", "Training a new hire takes weeks and ties up a senior"),
-    t("Quand quelqu'un part, son savoir part avec", "When someone leaves, their knowledge leaves too"),
+    t("La révision de conformité se fait manuellement, fichier par fichier", "Compliance review is done manually, file by file"),
+    t("Les non-conformités sont découvertes par l'auditeur, pas par vous", "Non-conformities are found by the auditor, not by you"),
+    t("La vérification prend des semaines et personne ne veut s'en occuper", "The review takes weeks and nobody wants to deal with it"),
+    t("Quand la norme change, vous ne savez pas exactement ce qui doit changer chez vous", "When the standard changes, you don't know exactly what needs to change for you"),
+    t("Votre équipe qualité passe son temps sur de la vérification au lieu d'amélioration", "Your quality team spends its time on verification instead of improvement"),
   ];
 
   const newWays = [
-    t("Les réponses sont accessibles à tout le monde, tout le temps", "Answers are accessible to everyone, all the time"),
-    t("Les employés trouvent l'information seuls, en quelques secondes", "Employees find information on their own, in seconds"),
-    t("Des procédures claires, étape par étape, avec images et vidéos", "Clear step-by-step procedures with images and videos"),
-    t("Les nouveaux sont autonomes dès la première semaine", "New hires are independent within the first week"),
-    t("Le savoir-faire est capturé et reste dans l'entreprise", "Know-how is captured and stays in the company"),
+    t("Les écarts sont détectés automatiquement, avant que l'auditeur arrive", "Gaps are detected automatically, before the auditor arrives"),
+    t("Votre équipe reçoit la liste précise de ce qui doit être corrigé", "Your team receives the exact list of what needs to be corrected"),
+    t("La révision de conformité passe de semaines à quelques heures", "Compliance review goes from weeks to a few hours"),
+    t("Quand la norme change, vous savez exactement ce qui doit changer", "When the standard changes, you know exactly what needs to change"),
+    t("Votre équipe qualité se concentre sur la correction, pas sur la recherche", "Your quality team focuses on fixing, not searching"),
   ];
 
   return (
@@ -41,8 +41,8 @@ export const SonoriaShift = () => {
             {t("Le changement", "The shift")}
           </span>
           <h2 id="shift-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Imaginez votre usine ", "Imagine your plant ")}
-            <span className="text-gradient">{t("sans ces problèmes.", "without these problems.")}</span>
+            {t("Imaginez votre prochain audit ", "Imagine your next audit ")}
+            <span className="text-gradient">{t("sans préparation de dernière minute.", "without last-minute preparation.")}</span>
           </h2>
         </motion.div>
 

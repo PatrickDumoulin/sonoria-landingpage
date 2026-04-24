@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquareText, Zap, TrendingUp, Shield, Clock, Users } from "lucide-react";
+import { Clock, Shield, ShieldAlert, TrendingUp, Zap, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaResultsFinal = () => {
@@ -7,28 +7,28 @@ export const SonoriaResultsFinal = () => {
 
   const results = [
     {
-      icon: MessageSquareText,
-      text: t("Vos employés trouvent la réponse en 10 secondes — sans déranger personne", "Your employees find the answer in 10 seconds — without bothering anyone"),
-    },
-    {
-      icon: Zap,
-      text: t("Les nouveaux employés sont autonomes dès la première semaine, pas après 6", "New employees are independent within the first week, not after 6"),
-    },
-    {
-      icon: TrendingUp,
-      text: t("Moins d'erreurs de montage et d'assemblage sur le plancher", "Fewer assembly and setup errors on the floor"),
+      icon: Clock,
+      text: t("Votre équipe qualité passe de semaines à quelques heures sur la révision annuelle", "Your quality team goes from weeks to a few hours on the annual review"),
     },
     {
       icon: Shield,
-      text: t("Le savoir-faire reste dans l'entreprise — même quand quelqu'un part", "Know-how stays in the company — even when someone leaves"),
+      text: t("Vous arrivez à votre audit avec un dossier complet, sans préparation de dernière minute", "You arrive at your audit with a complete file, without last-minute preparation"),
     },
     {
-      icon: Clock,
-      text: t("Vos meilleurs employés arrêtent de perdre leur temps à répéter les mêmes explications", "Your best employees stop wasting time repeating the same explanations"),
+      icon: ShieldAlert,
+      text: t("Les non-conformités sont détectées avant l'auditeur, pas par lui", "Non-conformities are detected before the auditor, not by them"),
     },
     {
-      icon: Users,
-      text: t("Votre production est moins dépendante de quelques individus", "Your production is less dependent on a few individuals"),
+      icon: TrendingUp,
+      text: t("Quand votre norme se met à jour, vous savez exactement ce qui change dans vos procédures", "When your standard updates, you know exactly what changes in your procedures"),
+    },
+    {
+      icon: Zap,
+      text: t("Votre responsable qualité se concentre sur l'amélioration continue, pas sur la vérification manuelle", "Your quality manager focuses on continuous improvement, not manual checking"),
+    },
+    {
+      icon: CheckCircle,
+      text: t("Zéro surprise à l'audit, zéro stress de dernière minute", "Zero audit surprises, zero last-minute stress"),
     },
   ];
 
@@ -53,7 +53,7 @@ export const SonoriaResultsFinal = () => {
           </span>
           <h2 id="results-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             {t("Ce que ça change ", "What this changes ")}
-            <span className="text-gradient">{t("sur votre plancher.", "on your shop floor.")}</span>
+            <span className="text-gradient">{t("avant et après votre audit.", "before and after your audit.")}</span>
           </h2>
         </motion.div>
 
@@ -83,8 +83,8 @@ export const SonoriaResultsFinal = () => {
           className="text-center text-xl text-foreground font-display font-semibold max-w-3xl mx-auto"
         >
           {t(
-            "Une usine où l'information circule sans effort. Où chaque employé peut faire son travail sans attendre après quelqu'un.",
-            "A plant where information flows effortlessly. Where every employee can do their job without waiting on someone."
+            "Une équipe qualité qui prépare les audits en quelques heures. Et un auditeur qui ne trouve plus rien que vous n'avez pas déjà corrigé.",
+            "A quality team that prepares for audits in hours. And an auditor who finds nothing you haven't already fixed."
           )}
         </motion.p>
       </div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Brain, GraduationCap, AlertTriangle, FolderSearch, UserMinus } from "lucide-react";
+import { Clock, AlertTriangle, FolderSearch, RotateCcw, Users, RefreshCw } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaProblem = () => {
@@ -7,45 +7,45 @@ export const SonoriaProblem = () => {
 
   const problems = [
     {
-      icon: MessageSquare,
+      icon: Clock,
       text: t(
-        "Un opérateur arrête sa ligne pour aller poser une question à un collègue. Ça arrive 10 fois par jour.",
-        "An operator stops the line to go ask a colleague a question. It happens 10 times a day."
-      ),
-    },
-    {
-      icon: Brain,
-      text: t(
-        "Votre meilleur technicien part à la retraite dans 6 mois. Tout ce qu'il sait est dans sa tête.",
-        "Your best technician retires in 6 months. Everything he knows is in his head."
-      ),
-    },
-    {
-      icon: GraduationCap,
-      text: t(
-        "Un nouvel employé met 3 à 6 semaines avant de pouvoir travailler seul — et quelqu'un doit le former à temps plein.",
-        "A new hire takes 3 to 6 weeks before they can work alone — and someone has to train them full-time."
-      ),
-    },
-    {
-      icon: FolderSearch,
-      text: t(
-        "Les procédures existent... quelque part. Dans un cartable, un drive, ou la mémoire de quelqu'un.",
-        "Procedures exist... somewhere. In a binder, a shared drive, or someone's memory."
+        "Votre responsable qualité passe des semaines chaque année à comparer manuellement vos procédures avec votre norme. Fichier par fichier, clause par clause.",
+        "Your quality manager spends weeks every year manually comparing your procedures against your standard. File by file, clause by clause."
       ),
     },
     {
       icon: AlertTriangle,
       text: t(
-        "Des erreurs de montage ou d'assemblage qui auraient été évitées si l'information avait été claire et accessible.",
-        "Assembly or setup errors that would have been avoided if the information had been clear and accessible."
+        "Un auditeur découvre une non-conformité que personne n'avait vue. Ça coûte du temps, de l'argent, et parfois votre certification.",
+        "An auditor finds a non-conformity nobody caught. It costs time, money, and sometimes your certification."
       ),
     },
     {
-      icon: UserMinus,
+      icon: FolderSearch,
       text: t(
-        "Quand un employé clé est absent ou quitte, toute l'équipe est ralentie pendant des semaines.",
-        "When a key employee is absent or leaves, the whole team slows down for weeks."
+        "Vos procédures internes ont changé en cours d'année. Personne n'a vérifié si elles sont encore conformes à la norme.",
+        "Your internal procedures changed during the year. Nobody checked if they still meet the standard."
+      ),
+    },
+    {
+      icon: RotateCcw,
+      text: t(
+        "La révision annuelle est étalée sur toute l'année parce que personne n'a le temps de s'y consacrer d'un coup.",
+        "The annual review gets stretched over the whole year because nobody has time to tackle it all at once."
+      ),
+    },
+    {
+      icon: Users,
+      text: t(
+        "Votre équipe passe des heures sur une tâche répétitive, sans valeur ajoutée, que tout le monde déteste faire.",
+        "Your team spends hours on a repetitive, low-value task that everyone dreads."
+      ),
+    },
+    {
+      icon: RefreshCw,
+      text: t(
+        "Quand la norme se met à jour, vous ne savez pas exactement ce qui a changé dans vos procédures.",
+        "When the standard updates, you don't know exactly what changed in your procedures."
       ),
     },
   ];
@@ -70,13 +70,13 @@ export const SonoriaProblem = () => {
             {t("Le vrai problème", "The real problem")}
           </span>
           <h2 id="problem-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Votre savoir-faire est ", "Your know-how is ")}
-            <span className="text-gradient">{t("coincé dans la tête de vos employés.", "stuck in your employees' heads.")}</span>
+            {t("Votre équipe passe des semaines à faire quelque chose ", "Your team spends weeks doing something ")}
+            <span className="text-gradient">{t("qu'une machine peut faire en minutes.", "a machine can do in minutes.")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t(
-              "Et chaque jour, ça vous coûte du temps, de l'argent, et de la capacité de production.",
-              "And every day, it's costing you time, money, and production capacity."
+              "Et chaque année, ça recommence.",
+              "And every year, it starts again."
             )}
           </p>
         </motion.div>
@@ -107,8 +107,8 @@ export const SonoriaProblem = () => {
           className="text-center text-xl text-foreground font-display font-bold max-w-3xl mx-auto"
         >
           {t(
-            "Ce n'est pas un problème de machines ou de logiciels. C'est un problème de connaissances mal transmises.",
-            "This isn't a machine or software problem. It's a knowledge transfer problem."
+            "Ce n'est pas un problème de rigueur ou de compétence. C'est un problème de processus manuel qui n'a jamais été automatisé.",
+            "This isn't a rigour or competence problem. It's a manual process that has never been automated."
           )}
         </motion.p>
       </div>

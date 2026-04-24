@@ -29,20 +29,20 @@ export const SonoriaCTA = () => {
             <div className="relative z-10 text-center">
               <h2 id="cta-heading" className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 {t(
-                  "10 minutes pour voir où votre équipe perd du temps.",
-                  "10 minutes to see where your team is losing time."
+                  "10 minutes pour voir où vous êtes exposés avant votre prochain audit.",
+                  "10 minutes to see where you're exposed before your next audit."
                 )}
               </h2>
               <p className="text-primary-foreground/80 mb-4 text-lg">
                 {t(
-                  "Un appel rapide, sans engagement. On regarde ensemble vos processus et on vous dit exactement ce qu'on peut améliorer.",
-                  "A quick call, no commitment. We look at your processes together and tell you exactly what we can improve."
+                  "Un appel rapide, sans engagement. On regarde ensemble vos procédures et votre certification, et on vous dit exactement quels sont vos risques.",
+                  "A quick call, no commitment. We look at your procedures and certification together, and tell you exactly where your risks are."
                 )}
               </p>
               <p className="text-primary-foreground/60 mb-8 text-sm">
                 {t(
-                  "Pas de présentation PowerPoint. Pas de pitch de vente. Juste une conversation entre opérationnels.",
-                  "No PowerPoint presentation. No sales pitch. Just a conversation between operations people."
+                  "Pas de présentation PowerPoint. Pas de pitch de vente. Juste une conversation entre gens qui comprennent la conformité.",
+                  "No PowerPoint presentation. No sales pitch. Just a conversation between people who understand compliance."
                 )}
               </p>
               <a

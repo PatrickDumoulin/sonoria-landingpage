@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Clock, RotateCcw, Users, DollarSign } from "lucide-react";
+import { Clock, DollarSign, ShieldAlert, RotateCcw } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaResults = () => {
@@ -8,38 +8,38 @@ export const SonoriaResults = () => {
   const costs = [
     {
       icon: Clock,
-      stat: t("5 à 10h", "5 to 10h"),
-      title: t("perdues par employé, par semaine", "lost per employee, per week"),
+      stat: t("40h", "40h"),
+      title: t("par mois passées à vérifier la conformité manuellement", "per month spent on manual compliance review"),
       description: t(
-        "À chercher de l'information, poser des questions, attendre la réponse de quelqu'un. Multipliez par votre nombre d'employés.",
-        "Searching for information, asking questions, waiting for someone's answer. Multiply by your headcount."
-      ),
-    },
-    {
-      icon: RotateCcw,
-      stat: t("15-30%", "15-30%"),
-      title: t("du temps de production perdu en reprise", "of production time lost to rework"),
-      description: t(
-        "Des erreurs de montage, des pièces mal assemblées, des étapes sautées. La plupart évitables avec la bonne information au bon moment.",
-        "Assembly errors, misaligned parts, skipped steps. Most avoidable with the right information at the right time."
-      ),
-    },
-    {
-      icon: Users,
-      stat: t("3-6 sem.", "3-6 wks"),
-      title: t("pour former un nouvel employé", "to train a new hire"),
-      description: t(
-        "Pendant ce temps, un employé senior est mobilisé à plein temps pour la formation — et sa propre production s'arrête.",
-        "During that time, a senior employee is pulled full-time for training — and their own production stops."
+        "Votre responsable qualité compare fichier par fichier, clause par clause, les procédures internes avec les exigences de votre norme. Chaque mois.",
+        "Your quality manager compares file by file, clause by clause, your internal procedures against your standard's requirements. Every month."
       ),
     },
     {
       icon: DollarSign,
-      stat: t("50 000 $+", "$50,000+"),
-      title: t("en coûts cachés par année", "in hidden costs per year"),
+      stat: t("Des dizaines de milliers $", "Tens of thousands $"),
+      title: t("ce que peut coûter un audit raté", "what a failed audit can cost"),
       description: t(
-        "Temps perdu, erreurs, formation prolongée, surcharge de vos meilleurs employés. Des coûts que personne ne mesure — mais tout le monde ressent.",
-        "Lost time, errors, extended training, overloaded top employees. Costs nobody measures — but everyone feels."
+        "Non-conformités majeures, plans d'action, réaudits, suspension de certification. Un auditeur qui trouve avant vous, ça coûte cher.",
+        "Major non-conformities, action plans, re-audits, suspended certification. An auditor finding issues before you do is expensive."
+      ),
+    },
+    {
+      icon: ShieldAlert,
+      stat: t("100%", "100%"),
+      title: t("des non-conformités auraient pu être détectées automatiquement", "of non-conformities could have been detected automatically"),
+      description: t(
+        "Chaque écart que vous trouvez manuellement aurait pu être signalé automatiquement. Le problème n'est pas le soin apporté, c'est le processus.",
+        "Every gap you find manually could have been flagged automatically. The issue isn't diligence, it's the process."
+      ),
+    },
+    {
+      icon: RotateCcw,
+      stat: t("Des semaines", "Weeks"),
+      title: t("de vérification répétitive chaque année", "of repetitive checking every year"),
+      description: t(
+        "Une tâche que tout le monde reconnaît comme répétitive et évitable, mais que personne n'a encore automatisée. Ça recommence chaque année.",
+        "A task everyone knows is repetitive and avoidable, but that nobody has automated yet. It happens again every year."
       ),
     },
   ];
@@ -99,8 +99,8 @@ export const SonoriaResults = () => {
           className="text-center text-lg text-muted-foreground max-w-3xl mx-auto"
         >
           {t(
-            "Vous compensez avec plus d'heures supplémentaires et plus de supervision. Mais le vrai problème reste le même.",
-            "You compensate with more overtime and more supervision. But the real problem stays the same."
+            "Vous compensez avec plus d'heures et plus de stress avant chaque audit. Mais le vrai problème reste le même.",
+            "You compensate with more hours and more stress before every audit. But the real problem stays the same."
           )}
         </motion.p>
       </div>
