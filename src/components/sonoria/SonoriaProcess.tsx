@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Database, Search, FileCheck, Check } from "lucide-react";
+import { Search, Mic, FileCheck, Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaProcess = () => {
@@ -7,30 +7,30 @@ export const SonoriaProcess = () => {
 
   const phases = [
     {
-      icon: Database,
+      icon: Search,
       days: t("Jour 1–3", "Day 1–3"),
-      title: t("On se connecte à vos documents et on configure la norme", "We connect to your documents and configure the standard"),
+      title: t("On identifie vos procédures les plus critiques", "We identify your most critical procedures"),
       description: t(
-        "On accède à votre SharePoint ou OneDrive et on importe les exigences de votre certification. Aucune perturbation de vos opérations.",
-        "We access your SharePoint or OneDrive and import your certification requirements. No disruption to your operations."
+        "On cible les tâches qui causent le plus d'interruptions, d'erreurs et de temps perdu. Pas besoin de tout documenter — on commence par ce qui compte.",
+        "We target the tasks causing the most interruptions, errors, and lost time. No need to document everything — we start with what matters."
       ),
     },
     {
-      icon: Search,
+      icon: Mic,
       days: t("Jour 4–10", "Day 4–10"),
-      title: t("On lance l'analyse automatique", "We run the automatic analysis"),
+      title: t("On capture le savoir de vos experts", "We capture your experts' knowledge"),
       description: t(
-        "Notre système compare chaque procédure avec chaque clause de votre norme. On identifie les écarts, les omissions et les contradictions.",
-        "Our system compares each procedure against each clause of your standard. We identify gaps, omissions, and contradictions."
+        "On s'assoit avec vos employés clés — 30 minutes max. On enregistre, on pose les bonnes questions, on ne les ralentit pas.",
+        "We sit with your key employees — 30 minutes max. We record, ask the right questions, and don't slow them down."
       ),
     },
     {
       icon: FileCheck,
-      days: t("Jour 11–14", "Day 11–14"),
-      title: t("On vous livre le rapport complet", "We deliver the complete report"),
+      days: t("Jour 10–14", "Day 10–14"),
+      title: t("On livre votre système, prêt à utiliser", "We deliver your system, ready to use"),
       description: t(
-        "Liste précise des non-conformités avec le document concerné, la clause applicable et le niveau de priorité. Votre équipe peut commencer à corriger immédiatement.",
-        "Precise list of non-conformities with the relevant document, applicable clause, and priority level. Your team can start correcting immediately."
+        "Procédures structurées, chat intelligent configuré, formation rapide de votre équipe. C'est en place et fonctionnel.",
+        "Structured procedures, smart chat configured, quick team training. It's in place and working."
       ),
     },
   ];
@@ -38,17 +38,17 @@ export const SonoriaProcess = () => {
   const guarantees = [
     t("Aucune perturbation de vos opérations", "No disruption to your operations"),
     t("Aucun projet IT à gérer", "No IT project to manage"),
-    t("Vos documents existants, aucune migration", "Your existing documents, no migration"),
+    t("30 minutes max de temps de vos employés", "30 minutes max of your employees' time"),
   ];
 
   return (
-    <section 
-      id="processus" 
+    <section
+      id="processus"
       aria-labelledby="process-heading"
       className="py-24 bg-muted/30 relative overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" aria-hidden="true" />
-      
+
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,13 +61,13 @@ export const SonoriaProcess = () => {
             {t("Comment ça marche", "How it works")}
           </span>
           <h2 id="process-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Rapport d'écarts en ", "Gap report in ")}
-            <span className="text-gradient">{t("14 jours ouvrables.", "14 business days.")}</span>
+            {t("Opérationnel en ", "Operational in ")}
+            <span className="text-gradient">{t("14 jours.", "14 days.")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t(
-              "Pas de projet de 6 mois. Pas de comité. On se connecte à vos documents et on vous livre le rapport.",
-              "No 6-month project. No committee. We connect to your documents and deliver the report."
+              "Pas de projet de 6 mois. Pas de comité. En deux semaines, votre équipe a un système qui fonctionne.",
+              "No 6-month project. No committee. In two weeks, your team has a working system."
             )}
           </p>
         </motion.div>
