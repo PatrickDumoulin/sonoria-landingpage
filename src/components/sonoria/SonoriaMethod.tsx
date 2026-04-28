@@ -107,6 +107,19 @@ export const SonoriaMethod = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center text-base text-muted-foreground max-w-3xl mx-auto mt-4"
+        >
+          {t(
+            "Une fois votre savoir structuré, tout devient possible : formation automatisée, détection des lacunes, intégration à vos outils existants.",
+            "Once your knowledge is structured, everything becomes possible: automated training, gap detection, integration with your existing tools."
+          )}
+        </motion.p>
       </div>
     </section>
   );
