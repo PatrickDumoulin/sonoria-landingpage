@@ -20,6 +20,7 @@ export const SonoriaFooter = () => {
             <a href="#solution" className="hover:text-foreground transition-colors">{t("Solution", "Solution")}</a>
             <a href="#processus" className="hover:text-foreground transition-colors">{t("Processus", "Process")}</a>
             <a href="#resultats" className="hover:text-foreground transition-colors">{t("Résultats", "Results")}</a>
+            <a href="/conformity" className="hover:text-foreground transition-colors">{t("Conformité", "Conformity")}</a>
           </nav>
           
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
