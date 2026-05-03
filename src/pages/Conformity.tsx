@@ -588,11 +588,11 @@ const Conformity = () => {
         <SonoriaNavbar />
         <main>
           <ConformityHero />
+          <SonoriaTrust />
           <ConformityProblems />
           <ConformityImpact />
           <ConformitySolution />
           <ConformityResults />
-          <SonoriaTrust />
           <ConformityCTA />
         </main>
         <SonoriaFooter />
