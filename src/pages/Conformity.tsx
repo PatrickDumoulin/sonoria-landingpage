@@ -7,6 +7,7 @@ import {
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext";
 import { SonoriaNavbar } from "@/components/sonoria/SonoriaNavbar";
 import { SonoriaFooter } from "@/components/sonoria/SonoriaFooter";
+import { SonoriaTrust } from "@/components/sonoria/SonoriaTrust";
 
 const calendlyUrl = "https://calendly.com/dumoulinsolutions/sonoria-appel-decouverte";
 
@@ -43,15 +44,6 @@ const ConformityHero = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-6 px-4 py-2 rounded-full bg-primary/10 border border-primary/30"
-          >
-            ISO · SQF · CNESST · BRC · HACCP
-          </motion.span>
-
           <motion.h1
             id="conformity-hero-heading"
             initial={{ opacity: 0, y: 30 }}
@@ -600,6 +592,7 @@ const Conformity = () => {
           <ConformityImpact />
           <ConformitySolution />
           <ConformityResults />
+          <SonoriaTrust />
           <ConformityCTA />
         </main>
         <SonoriaFooter />
