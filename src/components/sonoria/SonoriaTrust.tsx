@@ -4,7 +4,7 @@ import logoDeepsight from "@/assets/logo-deepsight.png";
 import logoBrb from "@/assets/logo-brb.png";
 import logoGemini from "@/assets/logo-gemini.png";
 import logoFermeOlofee from "@/assets/logo olofee.png";
-import logoUdeM from "@/assets/universite-de-montreal-1 (2).jpg";
+import logoUdeM from "@/assets/universite-de-montreal-1 (2).png";
 
 export const SonoriaTrust = () => {
   const { t } = useLanguage();
