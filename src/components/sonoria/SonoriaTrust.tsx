@@ -10,12 +10,14 @@ export const SonoriaTrust = () => {
   const { t } = useLanguage();
 
   const logos = [
-    { src: logoDeepsight, alt: "DeepSight" },
-    { src: logoBrb, alt: "BRB" },
-    { src: logoGemini, alt: "Sonoria" },
-    { src: logoFermeOlofee, alt: "Ferme Olofée" },
-    { src: logoUdeM, alt: "Université de Montréal" },
+    { src: logoDeepsight, alt: "DeepSight", large: false },
+    { src: logoBrb, alt: "BRB", large: false },
+    { src: logoGemini, alt: "Sonoria", large: false },
+    { src: logoFermeOlofee, alt: "Ferme Olofée", large: false },
+    { src: logoUdeM, alt: "Université de Montréal", large: true },
   ];
+
+  const track = [...logos, ...logos];
 
   return (
     <section className="py-16 border-y border-border/50">
@@ -43,16 +45,18 @@ export const SonoriaTrust = () => {
           <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-8">
             {t("Ils nous font confiance", "Trusted by")}
           </p>
-          <div className="flex items-center justify-center gap-16 flex-wrap">
-            {logos.map((logo) => (
-              <div key={logo.alt} className="flex items-center justify-center w-24 md:w-32">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="max-h-10 md:max-h-12 w-auto object-contain opacity-100"
-                />
-              </div>
-            ))}
+          <div className="overflow-hidden">
+            <div className="flex items-center animate-marquee w-max">
+              {track.map((logo, i) => (
+                <div key={i} className="flex items-center justify-center px-12 flex-shrink-0">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className={logo.large ? "max-h-14 md:max-h-16 w-auto object-contain" : "max-h-10 md:max-h-12 w-auto object-contain"}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
