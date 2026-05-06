@@ -4,6 +4,7 @@ import logoDeepsight from "@/assets/logo-deepsight.png";
 import logoBrb from "@/assets/logo-brb.png";
 import logoGemini from "@/assets/logo-gemini.png";
 import logoFermeOlofee from "@/assets/logo olofee.png";
+import logoUdeM from "@/assets/universite-de-montreal-1 (2).jpg";
 
 export const SonoriaTrust = () => {
   const { t } = useLanguage();
@@ -13,6 +14,7 @@ export const SonoriaTrust = () => {
     { src: logoBrb, alt: "BRB" },
     { src: logoGemini, alt: "Sonoria" },
     { src: logoFermeOlofee, alt: "Ferme Olofée" },
+    { src: logoUdeM, alt: "Université de Montréal" },
   ];
 
   return (
