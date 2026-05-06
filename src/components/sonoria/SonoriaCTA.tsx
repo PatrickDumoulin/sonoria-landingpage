@@ -3,7 +3,7 @@ import { ArrowRight, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaCTA = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <section
@@ -29,20 +29,20 @@ export const SonoriaCTA = () => {
             <div className="relative z-10 text-center">
               <h2 id="cta-heading" className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 {t(
-                  "10 minutes pour voir où votre équipe perd du temps.",
-                  "10 minutes to see where your team is losing time."
+                  "30 minutes pour identifier où l'IA peut changer vos opérations.",
+                  "30 minutes to identify where AI can change your operations."
                 )}
               </h2>
               <p className="text-primary-foreground/80 mb-4 text-lg">
                 {t(
-                  "Un appel rapide, sans engagement. On regarde ensemble vos processus et on vous dit exactement ce qu'on peut améliorer.",
-                  "A quick call, no commitment. We look at your processes together and tell you exactly what we can improve."
+                  "Un diagnostic gratuit, sans engagement. On analyse vos processus et on vous dit exactement où les opportunités sont — et ce qu'elles peuvent vous rapporter.",
+                  "A free diagnostic, no commitment. We analyze your processes and tell you exactly where the opportunities are — and what they can deliver."
                 )}
               </p>
               <p className="text-primary-foreground/60 mb-8 text-sm">
                 {t(
-                  "Pas de présentation PowerPoint. Pas de pitch de vente. Juste une conversation entre opérationnels.",
-                  "No PowerPoint presentation. No sales pitch. Just a conversation between operations people."
+                  "Pas de jargon tech. Pas de pitch de vente. Une conversation entre gens d'opérations.",
+                  "No tech jargon. No sales pitch. A conversation between operations people."
                 )}
               </p>
               <a
@@ -50,9 +50,9 @@ export const SonoriaCTA = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-background text-foreground font-display font-semibold hover:bg-background/90 transition-colors text-lg"
-                aria-label={t("Réserver mon appel de 10 minutes", "Book my 10-minute call")}
+                aria-label={t("Réserver mon diagnostic gratuit", "Book my free diagnostic")}
               >
-                {t("Réserver mon appel de 10 min", "Book my 10-min call")}
+                {t("Réserver mon diagnostic gratuit", "Book my free diagnostic")}
                 <ArrowRight className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
@@ -71,7 +71,7 @@ export const SonoriaCTA = () => {
             className="inline-flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Mail className="w-5 h-5 text-primary" />
+              <Mail className="w-5 h-5 text-primary" aria-hidden="true" />
             </div>
             <span className="text-foreground font-medium">patrick@sonoria.ca</span>
           </a>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Brain, GraduationCap, AlertTriangle, FolderSearch, UserMinus } from "lucide-react";
+import { TrendingDown, Database, AlertTriangle, Puzzle, ClipboardList, UserMinus } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaProblem = () => {
@@ -7,45 +7,45 @@ export const SonoriaProblem = () => {
 
   const problems = [
     {
-      icon: MessageSquare,
+      icon: TrendingDown,
       text: t(
-        "Un opérateur arrête sa ligne pour aller poser une question à un collègue. Ça arrive 10 fois par jour.",
-        "An operator stops the line to go ask a colleague a question. It happens 10 times a day."
+        "Vos concurrents automatisent des tâches que vos employés font encore à la main — et gagnent 20 à 30 % en capacité.",
+        "Your competitors automate tasks your employees still do by hand — gaining 20–30% more capacity."
       ),
     },
     {
-      icon: Brain,
+      icon: Database,
       text: t(
-        "Votre meilleur technicien part à la retraite dans 6 mois. Tout ce qu'il sait est dans sa tête.",
-        "Your best technician retires in 6 months. Everything he knows is in his head."
-      ),
-    },
-    {
-      icon: GraduationCap,
-      text: t(
-        "Un nouvel employé met 3 à 6 semaines avant de pouvoir travailler seul — et quelqu'un doit le former à temps plein.",
-        "A new hire takes 3 to 6 weeks before they can work alone — and someone has to train them full-time."
-      ),
-    },
-    {
-      icon: FolderSearch,
-      text: t(
-        "Les procédures existent... quelque part. Dans un cartable, un drive, ou la mémoire de quelqu'un.",
-        "Procedures exist... somewhere. In a binder, a shared drive, or someone's memory."
+        "Vos données de production dorment dans des Excel. Personne n'a le temps de les analyser, et les décisions se prennent à l'instinct.",
+        "Your production data sits unused in spreadsheets. Nobody has time to analyze it, so decisions are made on gut feel."
       ),
     },
     {
       icon: AlertTriangle,
       text: t(
-        "Des erreurs de montage ou d'assemblage qui auraient été évitées si l'information avait été claire et accessible.",
-        "Assembly or setup errors that would have been avoided if the information had been clear and accessible."
+        "Un problème de qualité se détecte trop tard — après que la commande est sortie. Le rappel, la reprise ou la perte client coûte cher.",
+        "A quality issue is detected too late — after the order ships. The recall, rework, or lost client costs a fortune."
+      ),
+    },
+    {
+      icon: Puzzle,
+      text: t(
+        "Vous avez déjà essayé des outils technologiques qui ne collaient pas à votre réalité terrain. Résultat : abandonné au bout de 3 mois.",
+        "You've tried tech tools that didn't fit your shop floor reality. Result: abandoned within 3 months."
+      ),
+    },
+    {
+      icon: ClipboardList,
+      text: t(
+        "La conformité et la traçabilité — HACCP, ISO, CCQ — vous coûtent des heures de saisie manuelle chaque semaine.",
+        "Compliance and traceability — HACCP, ISO, CCQ — eat hours of manual data entry every week."
       ),
     },
     {
       icon: UserMinus,
       text: t(
-        "Quand un employé clé est absent ou quitte, toute l'équipe est ralentie pendant des semaines.",
-        "When a key employee is absent or leaves, the whole team slows down for weeks."
+        "Votre savoir-faire est concentré dans quelques personnes. Quand elles partent ou sont absentes, toute l'équipe est ralentie.",
+        "Your know-how is concentrated in a few people. When they leave or are absent, the whole team slows down."
       ),
     },
   ];
@@ -70,13 +70,13 @@ export const SonoriaProblem = () => {
             {t("Le vrai problème", "The real problem")}
           </span>
           <h2 id="problem-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Votre savoir-faire est ", "Your know-how is ")}
-            <span className="text-gradient">{t("coincé dans la tête de vos employés.", "stuck in your employees' heads.")}</span>
+            {t("Le virage IA est en cours. ", "The AI shift is already happening. ")}
+            <span className="text-gradient">{t("Mais pas dans votre usine.", "Just not in your plant.")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t(
-              "Et chaque jour, ça vous coûte du temps, de l'argent, et de la capacité de production.",
-              "And every day, it's costing you time, money, and production capacity."
+              "Les PME industrielles qui adoptent l'IA maintenant prennent une avance structurelle sur celles qui attendent.",
+              "Industrial SMEs that adopt AI now are building a structural lead over those that wait."
             )}
           </p>
         </motion.div>
@@ -107,8 +107,8 @@ export const SonoriaProblem = () => {
           className="text-center text-xl text-foreground font-display font-bold max-w-3xl mx-auto"
         >
           {t(
-            "Ce n'est pas un problème de machines ou de logiciels. C'est un problème de connaissances mal transmises.",
-            "This isn't a machine or software problem. It's a knowledge transfer problem."
+            "Ce n'est pas un problème de budget ou de taille d'entreprise. C'est un problème d'accompagnement.",
+            "This isn't a budget or company size problem. It's a guidance problem."
           )}
         </motion.p>
       </div>

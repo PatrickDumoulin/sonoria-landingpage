@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquareText, Zap, TrendingUp, Shield, Clock, Users } from "lucide-react";
+import { Zap, BarChart2, ShieldCheck, BookOpen, TrendingUp, Layers } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaResultsFinal = () => {
@@ -7,28 +7,46 @@ export const SonoriaResultsFinal = () => {
 
   const results = [
     {
-      icon: MessageSquareText,
-      text: t("Vos employés trouvent la réponse en 10 secondes — sans déranger personne", "Your employees find the answer in 10 seconds — without bothering anyone"),
+      icon: Zap,
+      text: t(
+        "Votre équipe libérée des tâches répétitives à faible valeur — concentrée sur ce qui fait vraiment avancer la production",
+        "Your team freed from low-value repetitive tasks — focused on what actually moves production forward"
+      ),
     },
     {
-      icon: Zap,
-      text: t("Les nouveaux employés sont autonomes dès la première semaine, pas après 6", "New employees are independent within the first week, not after 6"),
+      icon: ShieldCheck,
+      text: t(
+        "Des problèmes de qualité détectés en temps réel, avant qu'ils deviennent des rappels ou des pertes de clients",
+        "Quality issues detected in real time, before they become recalls or lost clients"
+      ),
+    },
+    {
+      icon: BarChart2,
+      text: t(
+        "Des décisions opérationnelles appuyées sur vos données — pas sur l'instinct ou l'expérience de quelqu'un",
+        "Operational decisions backed by your data — not on instinct or someone's experience"
+      ),
+    },
+    {
+      icon: Layers,
+      text: t(
+        "Une traçabilité automatisée pour la conformité HACCP, ISO et CCQ — sans saisie manuelle chaque semaine",
+        "Automated traceability for HACCP, ISO, and CCQ compliance — no manual data entry every week"
+      ),
+    },
+    {
+      icon: BookOpen,
+      text: t(
+        "Vos nouveaux employés autonomes en jours, pas en semaines — votre savoir-faire capturé et accessible à tous",
+        "New employees independent in days, not weeks — your know-how captured and accessible to everyone"
+      ),
     },
     {
       icon: TrendingUp,
-      text: t("Moins d'erreurs de montage et d'assemblage sur le plancher", "Fewer assembly and setup errors on the floor"),
-    },
-    {
-      icon: Shield,
-      text: t("Le savoir-faire reste dans l'entreprise — même quand quelqu'un part", "Know-how stays in the company — even when someone leaves"),
-    },
-    {
-      icon: Clock,
-      text: t("Vos meilleurs employés arrêtent de perdre leur temps à répéter les mêmes explications", "Your best employees stop wasting time repeating the same explanations"),
-    },
-    {
-      icon: Users,
-      text: t("Votre production est moins dépendante de quelques individus", "Your production is less dependent on a few individuals"),
+      text: t(
+        "Des systèmes qui grandissent avec vous — sans tout recommencer à zéro à chaque phase de croissance",
+        "Systems that scale with you — without starting over from scratch at every growth phase"
+      ),
     },
   ];
 
@@ -53,7 +71,7 @@ export const SonoriaResultsFinal = () => {
           </span>
           <h2 id="results-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             {t("Ce que ça change ", "What this changes ")}
-            <span className="text-gradient">{t("sur votre plancher.", "on your shop floor.")}</span>
+            <span className="text-gradient">{t("dans vos opérations.", "in your operations.")}</span>
           </h2>
         </motion.div>
 
@@ -83,8 +101,8 @@ export const SonoriaResultsFinal = () => {
           className="text-center text-xl text-foreground font-display font-semibold max-w-3xl mx-auto"
         >
           {t(
-            "Une usine où l'information circule sans effort. Où chaque employé peut faire son travail sans attendre après quelqu'un.",
-            "A plant where information flows effortlessly. Where every employee can do their job without waiting on someone."
+            "Des opérations plus intelligentes. Une équipe plus efficace. Un avantage concurrentiel qui se construit dans le temps.",
+            "Smarter operations. A more effective team. A competitive advantage that compounds over time."
           )}
         </motion.p>
       </div>

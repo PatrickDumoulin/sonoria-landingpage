@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, Mic, FileCheck, Check } from "lucide-react";
+import { Search, Wrench, TrendingUp, Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaProcess = () => {
@@ -8,37 +8,37 @@ export const SonoriaProcess = () => {
   const phases = [
     {
       icon: Search,
-      days: t("Jour 1–3", "Day 1–3"),
-      title: t("On identifie vos procédures les plus critiques", "We identify your most critical procedures"),
+      days: t("Semaine 1–2", "Week 1–2"),
+      title: t("Diagnostic opérationnel", "Operational diagnostic"),
       description: t(
-        "On cible les tâches qui causent le plus d'interruptions, d'erreurs et de temps perdu. Pas besoin de tout documenter — on commence par ce qui compte.",
-        "We target the tasks causing the most interruptions, errors, and lost time. No need to document everything — we start with what matters."
+        "On passe du temps sur votre plancher. On cartographie vos processus existants et on identifie les 3 opportunités IA à plus fort impact — celles qui vont générer des résultats mesurables rapidement.",
+        "We spend time on your shop floor. We map your existing processes and identify the top 3 highest-impact AI opportunities — the ones that will generate measurable results quickly."
       ),
     },
     {
-      icon: Mic,
-      days: t("Jour 4–10", "Day 4–10"),
-      title: t("On capture le savoir de vos experts", "We capture your experts' knowledge"),
+      icon: Wrench,
+      days: t("Semaine 3–8", "Week 3–8"),
+      title: t("Intégration sur mesure", "Custom integration"),
       description: t(
-        "On s'assoit avec vos employés clés — 30 minutes max. On enregistre, on pose les bonnes questions, on ne les ralentit pas.",
-        "We sit with your key employees — 30 minutes max. We record, ask the right questions, and don't slow them down."
+        "On construit et intègre la solution dans vos systèmes existants. Pas un outil générique — quelque chose fait pour votre réalité, votre équipe, et vos processus spécifiques.",
+        "We build and integrate the solution into your existing systems. Not a generic tool — something made for your reality, your team, and your specific processes."
       ),
     },
     {
-      icon: FileCheck,
-      days: t("Jour 10–14", "Day 10–14"),
-      title: t("On livre votre système, prêt à utiliser", "We deliver your system, ready to use"),
+      icon: TrendingUp,
+      days: t("Mois 2+", "Month 2+"),
+      title: t("Mesure des résultats et optimisation", "Results measurement and optimization"),
       description: t(
-        "Procédures structurées, chat intelligent configuré, formation rapide de votre équipe. C'est en place et fonctionnel.",
-        "Structured procedures, smart chat configured, quick team training. It's in place and working."
+        "On suit les résultats avec vous. On mesure l'impact réel sur vos opérations, on ajuste ce qui peut être amélioré, et on s'assure que l'investissement se justifie — en chiffres.",
+        "We track results with you. We measure the real impact on your operations, adjust what can be improved, and make sure the investment is justified — in numbers."
       ),
     },
   ];
 
   const guarantees = [
     t("Aucune perturbation de vos opérations", "No disruption to your operations"),
-    t("Aucun projet IT à gérer", "No IT project to manage"),
-    t("30 minutes max de temps de vos employés", "30 minutes max of your employees' time"),
+    t("Solutions intégrées à vos systèmes existants", "Solutions integrated into your existing systems"),
+    t("Résultats mesurables, pas des promesses", "Measurable results, not promises"),
   ];
 
   return (
@@ -58,16 +58,16 @@ export const SonoriaProcess = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            {t("Comment ça marche", "How it works")}
+            {t("Comment on travaille", "How we work")}
           </span>
           <h2 id="process-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Opérationnel en ", "Operational in ")}
-            <span className="text-gradient">{t("14 jours.", "14 days.")}</span>
+            {t("Du diagnostic ", "From diagnostic ")}
+            <span className="text-gradient">{t("aux résultats mesurables.", "to measurable results.")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t(
-              "Pas de projet de 6 mois. Pas de comité. En deux semaines, votre équipe a un système qui fonctionne.",
-              "No 6-month project. No committee. In two weeks, your team has a working system."
+              "Pas de projet de 18 mois. Pas de comité. On commence par ce qui génère le plus de valeur pour vous, et on livre vite.",
+              "No 18-month project. No committee. We start with what generates the most value for you, and we deliver fast."
             )}
           </p>
         </motion.div>
@@ -84,7 +84,7 @@ export const SonoriaProcess = () => {
             >
               <div className="relative flex-shrink-0">
                 <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center">
-                  <phase.icon className="w-7 h-7 text-primary-foreground" />
+                  <phase.icon className="w-7 h-7 text-primary-foreground" aria-hidden="true" />
                 </div>
               </div>
               <div className="flex-1">
@@ -105,7 +105,7 @@ export const SonoriaProcess = () => {
         >
           {guarantees.map((guarantee, index) => (
             <div key={index} className="flex items-center gap-2 text-foreground">
-              <Check className="w-5 h-5 text-primary flex-shrink-0" />
+              <Check className="w-5 h-5 text-primary flex-shrink-0" aria-hidden="true" />
               <span className="font-medium">{guarantee}</span>
             </div>
           ))}

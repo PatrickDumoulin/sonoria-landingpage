@@ -6,19 +6,19 @@ export const SonoriaShift = () => {
   const { t } = useLanguage();
 
   const oldWays = [
-    t("Les réponses sont dans la tête de 2 ou 3 personnes", "Answers live in 2 or 3 people's heads"),
-    t("On interrompt quelqu'un chaque fois qu'on a une question", "Someone gets interrupted every time there's a question"),
-    t("Les procédures sont dans des cartables que personne n'ouvre", "Procedures are in binders nobody opens"),
-    t("Former un nouveau prend des semaines et mobilise un senior", "Training a new hire takes weeks and ties up a senior"),
-    t("Quand quelqu'un part, son savoir part avec", "When someone leaves, their knowledge leaves too"),
+    t("Des processus manuels répétitifs qui mangent la capacité de votre équipe", "Repetitive manual processes eating your team's capacity"),
+    t("Des données de production dans des Excel que personne ne consulte", "Production data sitting in spreadsheets nobody looks at"),
+    t("Des décisions prises à l'instinct, avec peu de visibilité sur le terrain", "Decisions made on gut feel with little visibility into what's happening"),
+    t("Des problèmes de qualité détectés après coup, une fois le dommage fait", "Quality issues detected after the fact, once the damage is done"),
+    t("Des outils technologiques déconnectés de votre réalité opérationnelle", "Tech tools disconnected from your operational reality"),
   ];
 
   const newWays = [
-    t("Les réponses sont accessibles à tout le monde, tout le temps", "Answers are accessible to everyone, all the time"),
-    t("Les employés trouvent l'information seuls, en quelques secondes", "Employees find information on their own, in seconds"),
-    t("Des procédures claires, étape par étape, avec images et vidéos", "Clear step-by-step procedures with images and videos"),
-    t("Les nouveaux sont autonomes dès la première semaine", "New hires are independent within the first week"),
-    t("Le savoir-faire est capturé et reste dans l'entreprise", "Know-how is captured and stays in the company"),
+    t("Des processus automatisés — votre équipe concentrée sur ce qui crée de la valeur", "Automated processes — your team focused on what creates value"),
+    t("Vos données en temps réel, visibles et exploitables par tout le monde", "Your data in real time, visible and actionable by everyone"),
+    t("Des décisions appuyées sur vos vrais chiffres opérationnels", "Decisions backed by your real operational numbers"),
+    t("Des alertes proactives avant que le problème survient et coûte cher", "Proactive alerts before the problem occurs and becomes costly"),
+    t("Des solutions sur mesure qui s'intègrent à votre façon de travailler", "Custom solutions that fit the way you actually work"),
   ];
 
   return (
@@ -41,8 +41,8 @@ export const SonoriaShift = () => {
             {t("Le changement", "The shift")}
           </span>
           <h2 id="shift-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Imaginez votre usine ", "Imagine your plant ")}
-            <span className="text-gradient">{t("sans ces problèmes.", "without these problems.")}</span>
+            {t("Imaginez vos opérations ", "Imagine your operations ")}
+            <span className="text-gradient">{t("avec la bonne IA intégrée.", "with the right AI integrated.")}</span>
           </h2>
         </motion.div>
 

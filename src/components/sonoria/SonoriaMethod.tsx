@@ -1,42 +1,52 @@
 import { motion } from "framer-motion";
-import { Upload, Layers, MessageSquareText, Rocket } from "lucide-react";
+import { Settings, BarChart2, BookOpen } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaMethod = () => {
   const { t } = useLanguage();
 
-  const steps = [
+  const services = [
     {
-      icon: Upload,
-      title: t("Envoyez-nous tout ce que vous avez", "Send us everything you've got"),
+      icon: Settings,
+      tag: t("Manufacturier · Agro-alimentaire · Construction", "Manufacturing · Agri-food · Construction"),
+      title: t("Automatisation des processus", "Process automation"),
       description: t(
-        "PDFs, vidéos de formation, photos, notes manuscrites — même le désordre. On s'occupe du tri.",
-        "PDFs, training videos, photos, handwritten notes — even the mess. We handle the sorting."
+        "On identifie et élimine les tâches manuelles répétitives qui freinent votre capacité. Entrée de données, suivi de production, rapports, formulaires de conformité — automatisés, sans erreur.",
+        "We identify and eliminate the repetitive manual tasks slowing your capacity. Data entry, production tracking, reports, compliance forms — automated, error-free."
       ),
+      outcomes: [
+        t("20–30 % de capacité récupérée", "20–30% capacity recovered"),
+        t("Moins d'erreurs de saisie", "Fewer data entry errors"),
+        t("Conformité simplifiée (HACCP, ISO, CCQ)", "Simplified compliance (HACCP, ISO, CCQ)"),
+      ],
     },
     {
-      icon: Layers,
-      title: t("On crée vos procédures pour vous", "We create your procedures for you"),
+      icon: BarChart2,
+      tag: t("Toutes industries", "All industries"),
+      title: t("Intelligence opérationnelle", "Operational intelligence"),
       description: t(
-        "On transforme votre matériel brut en instructions claires, étape par étape, avec images et vidéos intégrées. Vous ne rédigez rien.",
-        "We turn your raw material into clear step-by-step instructions with embedded images and videos. You write nothing."
+        "Vos données de production, qualité et inventaire, visibles en temps réel dans un tableau de bord sur mesure. Des alertes proactives qui vous préviennent avant que le problème survient.",
+        "Your production, quality, and inventory data visible in real time on a custom dashboard. Proactive alerts that warn you before the problem occurs."
       ),
+      outcomes: [
+        t("Décisions appuyées sur vos vrais chiffres", "Decisions backed by real numbers"),
+        t("Alertes qualité en temps réel", "Real-time quality alerts"),
+        t("Visibilité complète sur vos opérations", "Full visibility into your operations"),
+      ],
     },
     {
-      icon: MessageSquareText,
-      title: t("Vos employés posent des questions, le système répond", "Your employees ask questions, the system answers"),
+      icon: BookOpen,
+      tag: t("Manufacturier · Construction", "Manufacturing · Construction"),
+      title: t("Savoir-faire numérique", "Digital know-how"),
       description: t(
-        "Un employé tape sa question en langage normal. Le système répond avec la procédure exacte, la bonne étape, le bon visuel.",
-        "An employee types their question in plain language. The system responds with the exact procedure, the right step, the right visual."
+        "Votre expertise opérationnelle capturée et rendue accessible à toute l'équipe via un assistant IA sur mesure. Les nouveaux employés deviennent autonomes en jours, pas en semaines.",
+        "Your operational expertise captured and made accessible to the whole team via a custom AI assistant. New employees become independent in days, not weeks."
       ),
-    },
-    {
-      icon: Rocket,
-      title: t("Le système s'améliore tout seul", "The system improves on its own"),
-      description: t(
-        "Chaque question sans réponse est signalée. Vos experts comblent les trous, et le système devient plus complet avec le temps.",
-        "Every unanswered question gets flagged. Your experts fill the gaps, and the system becomes more complete over time."
-      ),
+      outcomes: [
+        t("Formation divisée par 3", "Training time cut by 3"),
+        t("Réponses instantanées aux questions terrain", "Instant answers to floor-level questions"),
+        t("Savoir-faire qui reste dans l'entreprise", "Know-how that stays in the company"),
+      ],
     },
   ];
 
@@ -57,69 +67,50 @@ export const SonoriaMethod = () => {
           className="text-center mb-6"
         >
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            {t("Notre approche", "Our approach")}
+            {t("Ce qu'on fait", "What we do")}
           </span>
           <h2 id="solution-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Vous ne créez pas de procédures.", "You don't create procedures.")}
-            <br />
-            <span className="text-gradient">{t("On fait tout pour vous.", "We do everything for you.")}</span>
+            {t("Trois façons concrètes ", "Three concrete ways ")}
+            <span className="text-gradient">{t("d'améliorer vos opérations.", "we improve your operations.")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t(
-              "Pas de rédaction. Pas de logiciel à apprendre. Pas de projet IT. Vous nous envoyez votre matériel, on vous livre un système fonctionnel.",
-              "No writing. No software to learn. No IT project. You send us your material, we deliver a working system."
+              "On ne vend pas un logiciel générique. On intègre les bons outils IA à votre réalité — sur mesure, avec des résultats mesurables.",
+              "We don't sell generic software. We integrate the right AI tools into your reality — custom-built, with measurable results."
             )}
           </p>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center text-primary font-display font-bold text-lg mb-12"
-        >
-          {t("100% clé en main. Zéro effort de votre côté.", "100% done for you. Zero effort on your side.")}
-        </motion.p>
-
-        <div className="flex flex-col gap-6 max-w-3xl mx-auto mb-12">
-          {steps.map((step, index) => (
+        <div className="flex flex-col gap-6 max-w-4xl mx-auto mt-12">
+          {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-start gap-6 bg-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-colors"
+              className="bg-card border border-border rounded-2xl p-8 hover:border-primary/30 transition-colors"
             >
-              <div className="relative flex-shrink-0">
-                <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center">
-                  <step.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center flex-shrink-0">
+                  <service.icon className="w-7 h-7 text-primary-foreground" aria-hidden="true" />
                 </div>
-                <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-card border border-border flex items-center justify-center text-xs font-bold text-primary">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-              </div>
-              <div className="flex-1">
-                <h3 className="font-display text-lg font-bold text-foreground mb-2">{step.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                <div className="flex-1">
+                  <span className="text-xs font-semibold text-primary tracking-wider uppercase mb-2 block">{service.tag}</span>
+                  <h3 className="font-display text-xl font-bold text-foreground mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.outcomes.map((outcome, i) => (
+                      <span key={i} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium border border-primary/20">
+                        {outcome}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center text-base text-muted-foreground max-w-3xl mx-auto mt-4"
-        >
-          {t(
-            "Une fois votre savoir structuré, tout devient possible : formation automatisée, détection des lacunes, intégration à vos outils existants.",
-            "Once your knowledge is structured, everything becomes possible: automated training, gap detection, integration with your existing tools."
-          )}
-        </motion.p>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Clock, RotateCcw, Users, DollarSign } from "lucide-react";
+import { TrendingDown, AlertCircle, Database, Clock } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const SonoriaResults = () => {
@@ -7,39 +7,39 @@ export const SonoriaResults = () => {
 
   const costs = [
     {
+      icon: TrendingDown,
+      stat: t("15–25 %", "15–25%"),
+      title: t("de capacité perdue en tâches manuelles à faible valeur", "of capacity lost to low-value manual tasks"),
+      description: t(
+        "Entrée de données, rapports manuels, recherche d'information. Des tâches que vos meilleurs employés font encore à la main — et qui pourraient être automatisées.",
+        "Data entry, manual reports, searching for information. Tasks your best employees still do by hand — and that could be automated."
+      ),
+    },
+    {
+      icon: AlertCircle,
+      stat: t("5 000 $ à 50 000 $", "$5,000–$50,000"),
+      title: t("le coût moyen d'un problème qualité non détecté à temps", "the average cost of a quality issue detected too late"),
+      description: t(
+        "Rappel de produits, reprise de production, perte d'un client. La plupart de ces erreurs auraient pu être prévenues avec la bonne visibilité en temps réel.",
+        "Product recall, production rework, lost client. Most of these errors could have been prevented with the right real-time visibility."
+      ),
+    },
+    {
+      icon: Database,
+      stat: t("80 %", "80%"),
+      title: t("des données opérationnelles jamais analysées", "of operational data never analyzed"),
+      description: t(
+        "Vous générez des données de production, de qualité et d'inventaire chaque jour. La plupart dorment dans des fichiers que personne ne consulte.",
+        "You generate production, quality, and inventory data every day. Most of it sits unused in files nobody looks at."
+      ),
+    },
+    {
       icon: Clock,
-      stat: t("5 à 10h", "5 to 10h"),
-      title: t("perdues par employé, par semaine", "lost per employee, per week"),
+      stat: t("3 à 5 ans", "3 to 5 years"),
+      title: t("d'avance que vos concurrents accumulent pendant que vous attendez", "head start your competitors build while you wait"),
       description: t(
-        "À chercher de l'information, poser des questions, attendre la réponse de quelqu'un. Multipliez par votre nombre d'employés.",
-        "Searching for information, asking questions, waiting for someone's answer. Multiply by your headcount."
-      ),
-    },
-    {
-      icon: RotateCcw,
-      stat: t("15-30%", "15-30%"),
-      title: t("du temps de production perdu en reprise", "of production time lost to rework"),
-      description: t(
-        "Des erreurs de montage, des pièces mal assemblées, des étapes sautées. La plupart évitables avec la bonne information au bon moment.",
-        "Assembly errors, misaligned parts, skipped steps. Most avoidable with the right information at the right time."
-      ),
-    },
-    {
-      icon: Users,
-      stat: t("3-6 sem.", "3-6 wks"),
-      title: t("pour former un nouvel employé", "to train a new hire"),
-      description: t(
-        "Pendant ce temps, un employé senior est mobilisé à plein temps pour la formation — et sa propre production s'arrête.",
-        "During that time, a senior employee is pulled full-time for training — and their own production stops."
-      ),
-    },
-    {
-      icon: DollarSign,
-      stat: t("50 000 $+", "$50,000+"),
-      title: t("en coûts cachés par année", "in hidden costs per year"),
-      description: t(
-        "Temps perdu, erreurs, formation prolongée, surcharge de vos meilleurs employés. Des coûts que personne ne mesure — mais tout le monde ressent.",
-        "Lost time, errors, extended training, overloaded top employees. Costs nobody measures — but everyone feels."
+        "L'IA dans l'industrie n'est plus une tendance — c'est un avantage concurrentiel qui se construit dès maintenant. Chaque mois d'attente élargit l'écart.",
+        "AI in industry is no longer a trend — it's a competitive advantage being built right now. Every month you wait widens the gap."
       ),
     },
   ];
@@ -64,8 +64,8 @@ export const SonoriaResults = () => {
             {t("Le coût réel", "The real cost")}
           </span>
           <h2 id="impact-heading" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("Combien ça vous coûte ", "How much is this ")}
-            <span className="text-gradient">{t("de ne rien changer ?", "costing you?")}</span>
+            {t("Combien ça vous coûte ", "What is it costing you ")}
+            <span className="text-gradient">{t("de ne pas faire ce virage ?", "to miss this shift?")}</span>
           </h2>
         </motion.div>
 
@@ -99,8 +99,8 @@ export const SonoriaResults = () => {
           className="text-center text-lg text-muted-foreground max-w-3xl mx-auto"
         >
           {t(
-            "Vous compensez avec plus d'heures supplémentaires et plus de supervision. Mais le vrai problème reste le même.",
-            "You compensate with more overtime and more supervision. But the real problem stays the same."
+            "Ces coûts sont réels, mais invisibles. Personne ne les mesure — et c'est exactement pourquoi ils persistent.",
+            "These costs are real, but invisible. Nobody measures them — and that's exactly why they persist."
           )}
         </motion.p>
       </div>
