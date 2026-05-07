@@ -75,8 +75,8 @@ export const SonoriaProblem = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t(
-              "Les PME industrielles qui adoptent l'IA maintenant prennent une avance structurelle sur celles qui attendent.",
-              "Industrial SMEs that adopt AI now are building a structural lead over those that wait."
+              "Les PME manufacturières, agroalimentaires et de construction qui adoptent l'IA maintenant prennent une avance structurelle sur celles qui attendent.",
+              "Manufacturing, agri-food, and construction SMEs that adopt AI now are building a structural lead over those that wait."
             )}
           </p>
         </motion.div>

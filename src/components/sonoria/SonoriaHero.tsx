@@ -64,8 +64,8 @@ export const SonoriaHero = () => {
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed"
           >
             {t(
-              "On intègre l'IA et les logiciels sur mesure là où ça compte le plus dans votre entreprise — pour réduire les erreurs, libérer votre capacité et prendre de meilleures décisions.",
-              "We integrate AI and custom software where it matters most in your business — to reduce errors, free up capacity, and enable better decisions."
+              "On intègre l'IA et les logiciels sur mesure là où ça compte le plus dans votre usine, votre site agroalimentaire ou votre chantier — pour réduire les erreurs, libérer votre capacité et prendre de meilleures décisions.",
+              "We integrate AI and custom software where it matters most in your manufacturing plant, food production site, or construction operation — to reduce errors, free up capacity, and enable better decisions."
             )}
           </motion.p>
 

@@ -44,6 +44,12 @@ export const SonoriaShift = () => {
             {t("Imaginez vos opérations ", "Imagine your operations ")}
             <span className="text-gradient">{t("avec la bonne IA intégrée.", "with the right AI integrated.")}</span>
           </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            {t(
+              "Que vous soyez en production manufacturière, en transformation alimentaire ou dans la construction — voici ce que ça change concrètement.",
+              "Whether you're in manufacturing, food processing, or construction — here's what actually changes."
+            )}
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">

@@ -41,8 +41,8 @@ export const SonoriaCTA = () => {
               </p>
               <p className="text-primary-foreground/60 mb-8 text-sm">
                 {t(
-                  "Pas de jargon tech. Pas de pitch de vente. Une conversation entre gens d'opérations.",
-                  "No tech jargon. No sales pitch. A conversation between operations people."
+                  "Pas de jargon tech. Pas de pitch de vente. Une conversation entre gens d'opérations — manufacturier, agroalimentaire ou construction.",
+                  "No tech jargon. No sales pitch. A conversation between people who know operations — manufacturing, agri-food, or construction."
                 )}
               </p>
               <a
