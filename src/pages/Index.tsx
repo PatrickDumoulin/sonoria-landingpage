@@ -7,6 +7,7 @@ import { SonoriaResults } from "@/components/sonoria/SonoriaResults";
 import { SonoriaShift } from "@/components/sonoria/SonoriaShift";
 import { SonoriaMethod } from "@/components/sonoria/SonoriaMethod";
 import { SonoriaProcess } from "@/components/sonoria/SonoriaProcess";
+import { SonoriaProducts } from "@/components/sonoria/SonoriaProducts";
 import { SonoriaResultsFinal } from "@/components/sonoria/SonoriaResultsFinal";
 import { SonoriaCTA } from "@/components/sonoria/SonoriaCTA";
 import { SonoriaFooter } from "@/components/sonoria/SonoriaFooter";
@@ -24,6 +25,7 @@ const Index = () => {
           <SonoriaShift />
           <SonoriaMethod />
           <SonoriaProcess />
+          <SonoriaProducts />
           <SonoriaResultsFinal />
           <SonoriaCTA />
         </main>

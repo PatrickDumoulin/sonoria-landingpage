@@ -17,6 +17,7 @@ export const SonoriaNavbar = () => {
     { name: t("Coût", "Cost"), href: "#impact" },
     { name: t("Solution", "Solution"), href: "#solution" },
     { name: t("Processus", "Process"), href: "#processus" },
+    { name: t("Nos produits", "Our products"), href: "#produits" },
     { name: t("Résultats", "Results"), href: "#resultats" },
   ];
 
