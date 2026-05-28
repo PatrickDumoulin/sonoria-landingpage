@@ -6,7 +6,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://sonoria.ca/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://sonoria.ca/" />
@@ -14,8 +14,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sonoria.ca/" />
     <image:image>
       <image:loc>https://sonoria.ca/og-image.png</image:loc>
-      <image:title>Sonoria - Transformez le savoir-faire de vos équipes en instructions claires en 14 jours</image:title>
-      <image:caption>Service clé en main de documentation du savoir-faire pour entreprises manufacturières et de construction</image:caption>
+      <image:title>Sonoria — L'IA qui fait vraiment avancer vos opérations</image:title>
+      <image:caption>Solutions d'IA sur mesure pour PME manufacturières, agroalimentaires et de construction au Québec</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://sonoria.ca/logo.png</image:loc>
@@ -26,7 +26,7 @@
   <!-- Questionnaire page -->
   <url>
     <loc>https://sonoria.ca/questionnaire</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://sonoria.ca/questionnaire" />
