@@ -1,0 +1,24 @@
+{
+  "name": "Sonoria — IA pour PME manufacturières",
+  "short_name": "Sonoria",
+  "description": "Solutions d'IA sur mesure pour PME manufacturières, agroalimentaires et de construction au Québec",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0066FF",
+  "lang": "fr-CA",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

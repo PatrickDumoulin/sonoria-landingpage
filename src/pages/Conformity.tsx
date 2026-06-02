@@ -8,6 +8,7 @@ import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext";
 import { SonoriaNavbar } from "@/components/sonoria/SonoriaNavbar";
 import { SonoriaFooter } from "@/components/sonoria/SonoriaFooter";
 import { SonoriaTrust } from "@/components/sonoria/SonoriaTrust";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const calendlyUrl = "https://calendly.com/dumoulinsolutions/sonoria-appel-decouverte";
 
@@ -581,10 +582,22 @@ const ConformityCTA = () => {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
+const ConformityMeta = () => {
+  usePageMeta({
+    title: "Conformité ISO/SQF/CNESST avec l'IA | Sonoria — PME Québec",
+    description: "Éliminez vos non-conformités récurrentes avec ExpertSync. Transformez vos procédures en assistant IA accessible en temps réel sur le plancher. Préparation aux audits réduite de semaines à quelques heures.",
+    canonical: "https://sonoria.ca/conformity",
+    ogTitle: "Sonoria | Conformité IA — Passez vos audits, protégez vos certifications",
+    ogDescription: "Vos non-conformités reviennent à chaque audit ? Sonoria transforme votre documentation en un système vivant que vos équipes consultent vraiment. Opérationnel en 14 jours.",
+  });
+  return null;
+};
+
 const Conformity = () => {
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-background">
+        <ConformityMeta />
         <SonoriaNavbar />
         <main>
           <ConformityHero />

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, CheckCircle2, Calendar } from "lucide-react";
 import { SonoriaNavbar } from "@/components/sonoria/SonoriaNavbar";
 import { SonoriaFooter } from "@/components/sonoria/SonoriaFooter";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 type Answer = "yes" | "no" | "unsure" | null;
 
@@ -57,6 +58,13 @@ const questions: Question[] = [
 ];
 
 const Questionnaire = () => {
+  usePageMeta({
+    title: "Diagnostic IA gratuit — Évaluez votre potentiel d'automatisation | Sonoria",
+    description: "Répondez à 5 questions pour identifier vos meilleures opportunités d'automatisation IA. Diagnostic gratuit et personnalisé pour PME manufacturières, agroalimentaires et de construction au Québec.",
+    canonical: "https://sonoria.ca/questionnaire",
+    ogTitle: "Sonoria | Diagnostic IA gratuit — Découvrez votre potentiel d'automatisation",
+    ogDescription: "5 questions pour identifier vos meilleures opportunités d'IA. Résultat immédiat, sans engagement. Spécialisé pour PME manufacturières au Québec.",
+  });
   const { language, t } = useLanguage();
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Answer[]>([null, null, null, null, null]);
